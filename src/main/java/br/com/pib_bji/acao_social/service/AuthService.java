@@ -16,11 +16,11 @@ public class AuthService {
     private PasswordEncoder passwordEncoder;
 
     public Usuario registerUser(String username, String password, String role) {
-        Usuario user = new Usuario();
-        user.setUsername(username);
-        user.setPassword(passwordEncoder.encode(password));
-        user.setRole(role);
-        return usuarioRepository.save(user);
+        Usuario usuario = new Usuario();
+        usuario.setUsername(username);
+        usuario.setPassword(passwordEncoder.encode(password));
+        usuario.setRole(role);
+        return usuarioRepository.save(usuario);
     }
 
     public Usuario findUserByUsername(String username) {
